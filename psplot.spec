@@ -1,10 +1,10 @@
+
 Name:		psplot
 Version:	0.1
 Release:	1
 URL:		http://www.nova.edu/ocean/psplot.html
 Source0:	ftp://student.ifpan.edu.pl/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}-Makefile
-#Source2:	http://alice.luft.tu-cottbus.de/mitarbeiter/wenzel/p_%{name}.tar.gz
 Summary:	A Fortran-callable Postscript plotting library
 License:	Freeware
 Group:		Libraries
@@ -80,11 +80,11 @@ gzip -9nf grmana4.ps *.txt *.for
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so.*.*
+%attr(755,root,root) %{_libdir}/lib%{name}.so.*.*
 %files devel
 %doc *.gz
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
+%attr(755,root,root) %{_libdir}/lib%{name}.so
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/lib%{name}.a
