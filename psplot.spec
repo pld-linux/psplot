@@ -61,14 +61,15 @@ Static psplot libraries.
 %build
 cp %{SOURCE1} Makefile
 %{__make} "CFLAGS=%{rpmcflags}"
-ln -s libpsplot.so libpsplot.so.link
+mv libpsplot.so libpsplot.so.%{version}
+ln -s libpsplot.so.%{version} libpsplot.so
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}
-install libpsplot.so $RPM_BUILD_ROOT%{_libdir}/libpsplot.so.%{version}
-cp -a libpsplot.so.link $RPM_BUILD_ROOT%{_libdir}/libpsplot.so
-install libpsplot.a $RPM_BUILD_ROOT%{_libdir}/libpsplot.a
+install libpsplot.so.%{version} $RPM_BUILD_ROOT%{_libdir}
+cp -a libpsplot.so $RPM_BUILD_ROOT%{_libdir}
+install libpsplot.a $RPM_BUILD_ROOT%{_libdir}
 
 gzip -9nf grmana4.ps *.txt *.for 
 
