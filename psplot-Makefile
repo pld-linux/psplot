@@ -1,0 +1,15 @@
+F77=g77
+AR=ar
+RANLIB=ranlib
+
+all:	libpsplot.so libpsplot.a
+
+psplot.o: psplot.txt
+	${F77} -x f77 psplot.txt -c ${CFLAGS}
+
+libpsplot.so: psplot.o
+	${F77} --shared psplot.o ${CFLAGS} -o libpsplot.so
+
+libpsplot.a: psplot.o
+	${AR} r libpsplot.a psplot.o
+	${RANLIB} libpsplot.a
