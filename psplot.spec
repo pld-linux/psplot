@@ -44,7 +44,6 @@ Pliki nag³ówkowe do biblioteki psplot.
 cp -f %{SOURCE1} Makefile
 %{__make} "CFLAGS=%{rpmcflags}"
 
-gzip -9nf grmana4.ps *.txt *.for
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -64,5 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc *.gz
+%doc grmana4.ps *.txt *.for
 %{_libdir}/lib%{name}.a
