@@ -5,7 +5,7 @@ Version:	0.1
 Release:	1
 License:	Freeware
 Group:		Libraries
-Source0:	ftp://student.ifpan.edu.pl/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://student.ifpan.edu.pl/pub/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}-Makefile
 URL:		http://www.nova.edu/ocean/psplot.html
 Buildrequires:	gcc-g77
