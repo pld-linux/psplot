@@ -67,8 +67,8 @@ ln -s libpsplot.so.%{version} libpsplot.so
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}
-install libpsplot.so.%{version} $RPM_BUILD_ROOT%{_libdir}
-cp -a libpsplot.so $RPM_BUILD_ROOT%{_libdir}
+install libpsplot.so.%{version} $RPM_BUILD_ROOT%{_libdir}/lib%{name}.so.%{version}
+cp -a libpsplot.so $RPM_BUILD_ROOT%{_libdir}/lib%{name}.so
 install libpsplot.a $RPM_BUILD_ROOT%{_libdir}
 
 gzip -9nf grmana4.ps *.txt *.for 
