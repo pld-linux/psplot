@@ -44,13 +44,13 @@ Pliki nag³ówkowe do biblioteki psplot.
 cp -f %{SOURCE1} Makefile
 %{__make} "CFLAGS=%{rpmcflags}"
 
+gzip -9nf grmana4.ps *.txt *.for
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}
 install libpsplot.so $RPM_BUILD_ROOT%{_libdir}
 install libpsplot.a $RPM_BUILD_ROOT%{_libdir}
-
-gzip -9nf grmana4.ps *.txt *.for
 
 %clean
 rm -rf $RPM_BUILD_ROOT
