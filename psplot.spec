@@ -9,7 +9,7 @@ Source0:	ftp://student.ifpan.edu.pl/pub/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	3704836929eae06c9419b339d6e4c5c4
 Source1:	%{name}-Makefile
 URL:		http://www.nova.edu/ocean/psplot.html
-Buildrequires:	gcc-g77
+BuildRequires:	gcc-g77
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
