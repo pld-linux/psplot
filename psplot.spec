@@ -5,7 +5,7 @@ Version:	0.1
 Release:	1
 License:	Freeware
 Group:		Libraries
-Source0:	ftp://student.ifpan.edu.pl/pub/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://student.ifpan.edu.pl/pub/psplot/%{name}-%{version}.tar.gz
 # Source0-md5:	3704836929eae06c9419b339d6e4c5c4
 Source1:	%{name}-Makefile
 URL:		http://www.nova.edu/ocean/psplot.html
@@ -30,7 +30,7 @@ wspó³dzielon±.
 Summary:	A Fortran-callable Postscript plotting library - header files
 Summary(pl):	Pliki nag³ówkowe do dzia³aj±cej z Fortranem biblioteki rysuj±cej Postscript
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for the psplot library.
