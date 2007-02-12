@@ -1,5 +1,5 @@
 Summary:	A Fortran-callable Postscript plotting library
-Summary(pl):	Dzia≥aj±ca z Fortranem biblioteka rysuj±ca w Postscripcie
+Summary(pl.UTF-8):   Dzia≈ÇajƒÖca z Fortranem biblioteka rysujƒÖca w Postscripcie
 Name:		psplot
 Version:	0.1
 Release:	1
@@ -19,24 +19,24 @@ the focus of the library is to produce technical drawing, many of the
 'artistic' features of Postscript have not beed addressed. This
 package is a shared library.
 
-%description -l pl
-Biblioteka psplot zawiera wywo≥ywalne z Fortrana procedury do
-produkcji plikÛw postscriptowych. Poniewaø g≥Ûwnym zadaniem biblioteki
-s± rysunki techniczne, wiele "artystycznych" moøliwo∂ci Postscriptu
-nie jest wykorzystywanych. Ten pakiet zawiera bibliotekÍ
-wspÛ≥dzielon±.
+%description -l pl.UTF-8
+Biblioteka psplot zawiera wywo≈Çywalne z Fortrana procedury do
+produkcji plik√≥w postscriptowych. Poniewa≈º g≈Ç√≥wnym zadaniem biblioteki
+sƒÖ rysunki techniczne, wiele "artystycznych" mo≈ºliwo≈õci Postscriptu
+nie jest wykorzystywanych. Ten pakiet zawiera bibliotekƒô
+wsp√≥≈ÇdzielonƒÖ.
 
 %package devel
 Summary:	A Fortran-callable Postscript plotting library - header files
-Summary(pl):	Pliki nag≥Ûwkowe do dzia≥aj±cej z Fortranem biblioteki rysuj±cej Postscript
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe do dzia≈ÇajƒÖcej z Fortranem biblioteki rysujƒÖcej Postscript
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for the psplot library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe do biblioteki psplot.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe do biblioteki psplot.
 
 %prep
 %setup -q -n %{name}
