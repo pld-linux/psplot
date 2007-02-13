@@ -1,5 +1,5 @@
 Summary:	A Fortran-callable Postscript plotting library
-Summary(pl.UTF-8):   Działająca z Fortranem biblioteka rysująca w Postscripcie
+Summary(pl.UTF-8):	Działająca z Fortranem biblioteka rysująca w Postscripcie
 Name:		psplot
 Version:	0.1
 Release:	1
@@ -28,7 +28,7 @@ współdzieloną.
 
 %package devel
 Summary:	A Fortran-callable Postscript plotting library - header files
-Summary(pl.UTF-8):   Pliki nagłówkowe do działającej z Fortranem biblioteki rysującej Postscript
+Summary(pl.UTF-8):	Pliki nagłówkowe do działającej z Fortranem biblioteki rysującej Postscript
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
