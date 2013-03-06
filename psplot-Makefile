@@ -5,11 +5,12 @@ RANLIB=ranlib
 all:	libpsplot.so libpsplot.a
 
 psplot.o: psplot.txt
-	${F77} -x f77 psplot.txt -c ${CFLAGS}
+	$(F77) -x f77 psplot.txt -c $(CFLAGS) -fPIC
 
 libpsplot.so: psplot.o
-	${F77} --shared psplot.o ${CFLAGS} -o libpsplot.so
+	$(F77) $(LDFLAGS) -shared -Wl,-soname,libpsplot.so.0 psplot.o $(CFLAGS) -o libpsplot.so.0
+	ln -sf libpsplot.so.0 libpsplot.so
 
 libpsplot.a: psplot.o
-	${AR} r libpsplot.a psplot.o
-	${RANLIB} libpsplot.a
+	$(AR) r libpsplot.a psplot.o
+	$(RANLIB) libpsplot.a

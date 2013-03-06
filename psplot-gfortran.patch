@@ -1,0 +1,20 @@
+--- psplot/psplot.txt.orig	2001-08-10 16:12:09.000000000 +0200
++++ psplot/psplot.txt	2013-03-06 20:50:24.569471004 +0100
+@@ -7439,6 +7439,7 @@
+       character*132 cmdstr,curfnt
+       character*80 fileout
+       character tim*8,dat*9
++      character zone*5
+       character*1 timer(8),dater(9)
+       equivalence(timer(1),tim),(dater(1),dat)
+       common/conre1/ioffp,spval
+@@ -7493,8 +7494,7 @@
+       cmdstr= '%%Title: '//fileout(1:lenstr(fileout,80))
+  
+       call filler
+-      call time(tim)
+-      call date(dat)
++      call date_and_time(dat, tim, zone)
+       if(timer(1).eq.' ')timer(1)='0'
+       if(dater(1).eq.' ')dater(1)='0'
+       cmdstr= '%%CreationDate: '//DAT//' '//TIM
