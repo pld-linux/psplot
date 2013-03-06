@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	ftp://student.ifpan.edu.pl/pub/psplot/%{name}-%{version}.tar.gz
 # Source0-md5:	3704836929eae06c9419b339d6e4c5c4
 Source1:	%{name}-Makefile
-URL:		http://www.nova.edu/ocean/psplot.html
+URL:		http://www.nova.edu/cwis/oceanography/psplot.html
 BuildRequires:	gcc-g77
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -20,7 +20,7 @@ the focus of the library is to produce technical drawing, many of the
 package is a shared library.
 
 %description -l pl.UTF-8
-Biblioteka psplot zawiera wywoływalne z Fortrana procedury do
+Biblioteka psplot zawiera wywoływalne z Fortranu procedury do
 produkcji plików postscriptowych. Ponieważ głównym zadaniem biblioteki
 są rysunki techniczne, wiele "artystycznych" możliwości Postscriptu
 nie jest wykorzystywanych. Ten pakiet zawiera bibliotekę
