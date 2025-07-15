@@ -53,7 +53,7 @@ Statyczna biblioteka psplot.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
+%patch -P0 -p1
 
 cp -f %{SOURCE1} Makefile
 
